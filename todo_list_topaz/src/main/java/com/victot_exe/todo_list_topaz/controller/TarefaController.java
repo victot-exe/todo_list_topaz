@@ -13,38 +13,39 @@ import java.util.List;
 
 @RestController
 @RequestMapping("tarefas")
-public class TarefasController {
+public class TarefaController {
 
     @Autowired
     private TarefaService tarefaService;
 
     @PutMapping()
     public ResponseEntity<TarefaDTOResponse> createTarefa(@RequestBody @Valid TarefaDTORequest tarefaRequest){
-        //TODO implementar
-        return ResponseEntity.ok().build();
+        TarefaDTOResponse response = tarefaService.createTarefa(tarefaRequest);
+        return ResponseEntity.status(201).body(response);
     }
 
     @GetMapping
     public ResponseEntity<List<TarefaDTOResponse>> getAllTarefas(){
-        //TODO implementar
-        return ResponseEntity.ok().build();
+        List<TarefaDTOResponse> tarefas = tarefaService.getAllTarefas();
+        return ResponseEntity.ok(tarefas);
     }
 
     @GetMapping("{id}")
-    public ResponseEntity<TarefaDTOResponse> getTarefaById(@RequestParam Long id) {
-        //TODO implementar
-        return ResponseEntity.ok().build();
+    public ResponseEntity<TarefaDTOResponse> getTarefaById(@PathVariable Long id) {
+        TarefaDTOResponse response = tarefaService.getTarefaById(id);
+        return ResponseEntity.ok(response);
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<TarefaDTOResponse> updateTarefa(@RequestParam Long id, @RequestBody @Valid TarefaDTORequest tarefaRequest){
-        //TODO implementar
-        return ResponseEntity.ok().build();
+    public ResponseEntity<TarefaDTOResponse> updateTarefa(@PathVariable Long id, @RequestBody @Valid TarefaDTORequest tarefaRequest){
+        TarefaDTOResponse response = tarefaService.updateTarefa(id, tarefaRequest);
+        return ResponseEntity.ok(response);
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<TarefaDTOResponse> deleteTarefa(@RequestParam Long id){
-        //TODO implementar
+    public ResponseEntity<TarefaDTOResponse> deleteTarefa(@PathVariable Long id){
+        tarefaService.deleteTarefaById(id);
         return ResponseEntity.noContent().build();
     }
+
 }

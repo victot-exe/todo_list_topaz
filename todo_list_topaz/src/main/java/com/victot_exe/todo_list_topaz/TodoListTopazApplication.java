@@ -1,6 +1,5 @@
 package com.victot_exe.todo_list_topaz;
 
-import com.victot_exe.todo_list_topaz.model.Tarefa;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,4 +10,4 @@ public class TodoListTopazApplication {
 		SpringApplication.run(TodoListTopazApplication.class, args);
 	}
 
-}
+}//TODO fazer uma migration para ver se o banco foi criado (pelo docker) e popular o mesmo.
