@@ -3,7 +3,6 @@ package com.victot_exe.todo_list_topaz.service;
 import com.victot_exe.todo_list_topaz.dto.TarefaDTORequest;
 import com.victot_exe.todo_list_topaz.dto.TarefaDTOResponse;
 import com.victot_exe.todo_list_topaz.exception.SemTarefasException;
-import com.victot_exe.todo_list_topaz.model.Status;
 import com.victot_exe.todo_list_topaz.model.Tarefa;
 import com.victot_exe.todo_list_topaz.repository.TarefaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,9 +75,5 @@ public class TarefaService {
             throw new SemTarefasException(id);
 
         tarefaRepository.deleteById(id);
-    }
-
-    public void getTarefasComStatus(Status status){//Talvez eu não use esse
-        //TODO implementar
     }
 }
