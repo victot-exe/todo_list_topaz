@@ -1,4 +1,4 @@
-const URI = "http://localhost:8080/tarefas"
+const URI = "http://backend_topaz:8080/tarefas"
 
 //método que vai para a tela de criar a tarefa
 function irParaTelaDeCriarTarefa() {
