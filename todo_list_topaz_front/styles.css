@@ -1,0 +1,32 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    /* ocupa toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+.row {
+    flex: 1;
+    /* faz a row crescer pra preencher o espaço */
+    overflow-y: auto;
+    /* adiciona scroll vertical se precisar */
+}
+
+.kanban-column {
+    border-right: 2px solid #ddd;
+    min-height: 100%;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.kanban-column:last-child {
+    border-right: none;
+}

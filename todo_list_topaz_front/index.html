@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANBAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"
+        defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Titulo -->
+        <div class="text-center my-4">
+            <h1 class="display-4">Lista de Tarefas</h1>
+        </div>
+        <!-- div que controla as divs de colunas -->
+        <div class="row">
+            <!-- div que devine uma coluna -->
+            <div class="col-md-3 kanban-column">
+                <h5 class="text-center mb-3">Não Iniciado</h5>
+                <!-- Tarefas da coluna 1 -->
+            </div>
+            <!-- div de coluna -->
+            <div class="col-md-3 kanban-column">
+                <h5 class="text-center mb-3">Em Andamento</h5>
+                <!-- Tarefas da coluna 2 -->
+            </div>
+            <!-- div de coluna -->
+            <div class="col-md-3 kanban-column">
+                <h5 class="text-center mb-3">Pausado</h5>
+                <!-- Tarefas da coluna 3 -->
+            </div>
+            <!-- div de coluna -->
+            <div class="col-md-3 kanban-column">
+                <h5 class="text-center mb-3">Concluído</h5>
+                <!-- Tarefas da coluna 4 -->
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
