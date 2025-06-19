@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS tarefa (
+    id SERIAL PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
+    status SMALLINT NOT NULL CHECK (status BETWEEN 0 AND 3)
+);

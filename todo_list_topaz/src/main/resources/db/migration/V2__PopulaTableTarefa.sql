@@ -1,0 +1,16 @@
+INSERT INTO tarefa (titulo, descricao, status) VALUES
+('Planejar reunião', 'Reunião de planejamento para o próximo sprint', 0),
+('Criar wireframe', 'Desenhar a interface inicial do sistema', 1),
+('Implementar login', 'Funcionalidade de autenticação de usuários', 2),
+('Configurar banco', 'Criar schema no PostgreSQL', 3),
+('Revisar código', 'Fazer code review do módulo de autenticação', 1),
+('Testar endpoints', 'Validar funcionamento das APIs no Postman', 0),
+('Atualizar documentação', 'Documentar rotas da API', 3),
+('Deploy no Heroku', 'Subir versão inicial do backend', 0),
+('Criar dashboard', 'Tela principal com resumo das tarefas', 1),
+('Escrever testes unitários', 'Cobertura de testes da camada de serviço', 3),
+('Estilizar página de login', 'Aplicar layout e responsividade', 2),
+('Validar formulários', 'Impedir envio de campos vazios', 0),
+('Corrigir bugs', 'Erros relatados pelo QA', 1),
+('Criar componente modal', 'Popup reutilizável com Bootstrap', 2),
+('Enviar para homologação', 'Preparar build para testes finais', 0);
