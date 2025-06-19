@@ -23,27 +23,78 @@
         <!-- div que controla as divs de colunas -->
         <div class="row">
             <!-- div que devine uma coluna -->
-            <div class="col-md-3 kanban-column">
+            <div id="NAO_INICIADO" class="col-md-3 kanban-column">
                 <h5 class="text-center mb-3">Não Iniciado</h5>
                 <!-- Tarefas da coluna 1 -->
             </div>
             <!-- div de coluna -->
-            <div class="col-md-3 kanban-column">
+            <div id="EM_ANDAMENTO" class="col-md-3 kanban-column">
                 <h5 class="text-center mb-3">Em Andamento</h5>
                 <!-- Tarefas da coluna 2 -->
             </div>
             <!-- div de coluna -->
-            <div class="col-md-3 kanban-column">
+            <div id="PAUSADA" class="col-md-3 kanban-column">
                 <h5 class="text-center mb-3">Pausado</h5>
                 <!-- Tarefas da coluna 3 -->
             </div>
             <!-- div de coluna -->
-            <div class="col-md-3 kanban-column">
+            <div id="CONCLUIDA" class="col-md-3 kanban-column">
                 <h5 class="text-center mb-3">Concluído</h5>
                 <!-- Tarefas da coluna 4 -->
             </div>
         </div>
     </div>
+    <!-- Botão de adicionar tarefas -->
+    <button id="btnAddTarefa" class="btn btn-primary rounded-circle" onclick="irParaTelaDeCriarTarefa()"> + </button>
+
+    <!-- PopUp de criar tarefas -->
+    <div id="overlay" class="overlay-hidden">
+        <div class="popup">
+            <h3>Criar nova tarefa</h3>
+            <form id="formCriarTarefa">
+                <div class="mb-3">
+                    <label for="titulo" class="form-label">Título</label>
+                    <input type="text" id="titulo" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <textarea id="descricao" class="form-control" required rows="3"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="status" class="form-label">Status</label>
+                    <select id="status" class="form-select" required>
+                        <option value="">Selecione o status</option>
+                        <option value="NAO_INICIADO">Não Iniciado</option>
+                        <option value="EM_ANDAMENTO">Em andamento</option>
+                        <option value="PAUSADA">Pausado</option>
+                        <option value="CONCLUIDA">Concluído</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Criar</button>
+                <button type="button" id="btnCancelar" class="btn btn-secondary ms-2">Cancelar</button>
+            </form>
+        </div>
+    </div>
+    <!-- PopUp de detalhar a tarefa -->
+    <div id="popupDetalhes" class="popup-overlay overlay-hidden" data-id="">
+        <div class="popup-content">
+            <button id="btnFecharPopup" class="btn-close">×</button>
+            <h2 id="popupTitulo"></h2>
+            <p id="popupDescricao"></p>
+            <p><strong>Status:</strong> <span id="popupStatus"></span></p>
+
+            <div class="popup-actions">
+                <button id="btnEditar" class="btn-action btn-edit" title="Editar tarefa" aria-label="Editar tarefa">
+                    ✏️
+                </button>
+                <button id="btnApagar" class="btn-action btn-delete" title="Apagar tarefa" aria-label="Apagar tarefa">
+                    🗑️
+                </button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 
